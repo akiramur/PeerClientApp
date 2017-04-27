@@ -35,6 +35,16 @@ $ git clone https://github.com/akiramur/PeerClientApp.git
 
 4. You also need existing [peerjs-server](https://github.com/peers/peerjs-server) which is already up and runing for signailng, or you need to set up by yourself.
 
+5. Edit <b>PeerClientApp/Configuration.swift</b> according to your peerjs-server settings.
+
+```
+static let host: String = "put your peerjs server url"
+static let path: String = "/"
+static let port: Int = 443
+static let key: String = "put your peerjs server key"
+static let secure: Bool = true
+```
+
 ## License
 
 MIT
