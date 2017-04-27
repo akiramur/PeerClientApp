@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Kr5-Sp-COE">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Video View Controller-->
+        <scene sceneID="aeJ-6b-3SJ">
+            <objects>
+                <viewController id="Kr5-Sp-COE" customClass="VideoViewController" customModule="PeerClientApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="qRl-AB-omd"/>
+                        <viewControllerLayoutGuide type="bottom" id="ZIw-R0-y9a"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="4Fb-ne-dAq">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h8s-JD-kCn" userLabel="Remote Video Container View">
+                                <rect key="frame" x="27.5" y="40" width="320" height="240"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="320" id="860-2u-Acb"/>
+                                    <constraint firstAttribute="height" constant="240" id="LXt-rN-Dgy"/>
+                                </constraints>
+                            </view>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EGU-c1-Z9m" userLabel="Particle Container View">
+                                <rect key="frame" x="27.5" y="40" width="320" height="240"/>
+                                <connections>
+                                    <segue destination="wjP-d8-Pbl" kind="embed" identifier="particleContainerView" id="G2v-in-vqx"/>
+                                </connections>
+                            </containerView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="w1t-4a-J7h" userLabel="Media Button Container View">
+                                <rect key="frame" x="76" y="427" width="271.5" height="40"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="media: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H8y-YO-FFB">
+                                        <rect key="frame" x="0.0" y="0.0" width="56" height="40"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L7i-Su-LEu" userLabel="Media Button">
+                                        <rect key="frame" x="71.5" y="5" width="200" height="30"/>
+                                        <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="16" id="3aF-Li-l8G"/>
+                                            <constraint firstAttribute="width" constant="200" id="7lB-FJ-eec"/>
+                                            <constraint firstAttribute="width" constant="16" id="XJl-Jp-6Pw"/>
+                                            <constraint firstAttribute="height" constant="30" id="fWx-dL-IQF"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <state key="normal" title="media"/>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="3aF-Li-l8G"/>
+                                                <exclude reference="XJl-Jp-6Pw"/>
+                                            </mask>
+                                        </variation>
+                                        <connections>
+                                            <action selector="mediaButtonPressedWithSender:" destination="Kr5-Sp-COE" eventType="touchUpInside" id="tN2-tp-7oz"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="H8y-YO-FFB" secondAttribute="bottom" id="5Ot-nF-h1M"/>
+                                    <constraint firstItem="L7i-Su-LEu" firstAttribute="centerY" secondItem="w1t-4a-J7h" secondAttribute="centerY" id="GvK-mB-gNO"/>
+                                    <constraint firstAttribute="height" constant="40" id="IEG-W0-mRf"/>
+                                    <constraint firstItem="H8y-YO-FFB" firstAttribute="leading" secondItem="w1t-4a-J7h" secondAttribute="leading" id="K7i-Dy-6wS"/>
+                                    <constraint firstAttribute="trailing" secondItem="L7i-Su-LEu" secondAttribute="trailing" id="Rlb-mH-O6S"/>
+                                    <constraint firstItem="H8y-YO-FFB" firstAttribute="top" secondItem="w1t-4a-J7h" secondAttribute="top" id="eIv-vo-f5q"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iGf-BB-Ct7" userLabel="Data Button Container View">
+                                <rect key="frame" x="76" y="472" width="271" height="40"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="data: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hJ7-YB-s8n">
+                                        <rect key="frame" x="0.0" y="0.0" width="43" height="40"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AMK-D3-H8F" userLabel="Data Button">
+                                        <rect key="frame" x="71" y="5" width="200" height="30"/>
+                                        <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="200" id="4pe-kw-dXR"/>
+                                            <constraint firstAttribute="width" constant="16" id="Ub9-GR-kVh"/>
+                                            <constraint firstAttribute="height" constant="16" id="gL0-ub-whL"/>
+                                            <constraint firstAttribute="height" constant="30" id="kUt-nH-wvx"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <state key="normal" title="data"/>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="Ub9-GR-kVh"/>
+                                                <exclude reference="gL0-ub-whL"/>
+                                            </mask>
+                                        </variation>
+                                        <connections>
+                                            <action selector="dataButtonPressedWithSender:" destination="Kr5-Sp-COE" eventType="touchUpInside" id="peK-yA-hNA"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="hJ7-YB-s8n" firstAttribute="leading" secondItem="iGf-BB-Ct7" secondAttribute="leading" id="Mgb-Ft-0eN"/>
+                                    <constraint firstAttribute="trailing" secondItem="AMK-D3-H8F" secondAttribute="trailing" id="UkC-ts-nP0"/>
+                                    <constraint firstAttribute="height" constant="40" id="h79-g4-SQI"/>
+                                    <constraint firstItem="hJ7-YB-s8n" firstAttribute="top" secondItem="iGf-BB-Ct7" secondAttribute="top" id="rrP-4b-fRl"/>
+                                    <constraint firstAttribute="bottom" secondItem="hJ7-YB-s8n" secondAttribute="bottom" id="tRz-8Q-nMo"/>
+                                    <constraint firstItem="AMK-D3-H8F" firstAttribute="centerY" secondItem="iGf-BB-Ct7" secondAttribute="centerY" id="uAH-2K-6iZ"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vzb-aD-A7f" userLabel="ExitVideoView Button">
+                                <rect key="frame" x="163.5" y="559" width="48" height="48"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="48" id="EWl-w5-HlI"/>
+                                    <constraint firstAttribute="height" constant="48" id="K4s-dd-g5Z"/>
+                                </constraints>
+                                <state key="normal" image="disconnect"/>
+                                <connections>
+                                    <action selector="exitVideoViewButtonPressedWithSender:" destination="Kr5-Sp-COE" eventType="touchUpInside" id="Kq5-JM-lj6"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="iGf-BB-Ct7" firstAttribute="leading" secondItem="w1t-4a-J7h" secondAttribute="leading" id="1Qm-wn-NzO"/>
+                            <constraint firstItem="w1t-4a-J7h" firstAttribute="trailing" secondItem="h8s-JD-kCn" secondAttribute="trailing" id="3aH-th-Sd9"/>
+                            <constraint firstItem="h8s-JD-kCn" firstAttribute="top" secondItem="qRl-AB-omd" secondAttribute="bottom" constant="20" id="6bN-qF-aTZ"/>
+                            <constraint firstItem="h8s-JD-kCn" firstAttribute="centerX" secondItem="4Fb-ne-dAq" secondAttribute="centerX" id="Afn-bk-Oa3"/>
+                            <constraint firstItem="ZIw-R0-y9a" firstAttribute="top" secondItem="vzb-aD-A7f" secondAttribute="bottom" constant="60" id="CcR-yq-VkO"/>
+                            <constraint firstItem="EGU-c1-Z9m" firstAttribute="bottom" secondItem="h8s-JD-kCn" secondAttribute="bottom" id="Ium-4Y-C0d"/>
+                            <constraint firstItem="EGU-c1-Z9m" firstAttribute="top" secondItem="h8s-JD-kCn" secondAttribute="top" id="TRc-RP-Bu9"/>
+                            <constraint firstItem="iGf-BB-Ct7" firstAttribute="top" secondItem="w1t-4a-J7h" secondAttribute="bottom" constant="5" id="Vo1-sr-gWx"/>
+                            <constraint firstItem="w1t-4a-J7h" firstAttribute="leading" secondItem="4Fb-ne-dAq" secondAttribute="leadingMargin" constant="60" id="XK7-6Z-7ki"/>
+                            <constraint firstItem="iGf-BB-Ct7" firstAttribute="trailing" secondItem="h8s-JD-kCn" secondAttribute="trailing" id="gky-JY-ehg"/>
+                            <constraint firstItem="EGU-c1-Z9m" firstAttribute="trailing" secondItem="h8s-JD-kCn" secondAttribute="trailing" id="hMb-nK-RGd"/>
+                            <constraint firstItem="EGU-c1-Z9m" firstAttribute="leading" secondItem="h8s-JD-kCn" secondAttribute="leading" id="nVm-v5-d4B"/>
+                            <constraint firstItem="vzb-aD-A7f" firstAttribute="centerX" secondItem="4Fb-ne-dAq" secondAttribute="centerX" id="on4-0b-Q7p"/>
+                            <constraint firstItem="ZIw-R0-y9a" firstAttribute="top" secondItem="w1t-4a-J7h" secondAttribute="bottom" constant="200" id="xYY-QO-qKS"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="8oD-rp-Ar4"/>
+                    <connections>
+                        <outlet property="dataButton" destination="AMK-D3-H8F" id="1VR-m7-zI1"/>
+                        <outlet property="exitVideoViewButton" destination="vzb-aD-A7f" id="mLt-cL-Sv4"/>
+                        <outlet property="mediaButton" destination="L7i-Su-LEu" id="7dh-mG-rlu"/>
+                        <outlet property="particleContainerView" destination="EGU-c1-Z9m" id="RHT-tC-grR"/>
+                        <outlet property="remoteVideoContainerView" destination="h8s-JD-kCn" id="yE3-AB-TBB"/>
+                        <segue destination="4zn-Xh-4VW" kind="unwind" identifier="backToContactsViewFromVideo" unwindAction="contactsViewReturnActionFor:" id="ukk-c2-7wB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zG6-sZ-7tq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="4zn-Xh-4VW" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="4586" y="230"/>
+        </scene>
+        <!--Particle View Controller-->
+        <scene sceneID="m53-bK-YND">
+            <objects>
+                <viewController id="wjP-d8-Pbl" customClass="ParticleViewController" customModule="PeerClientApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="U78-bR-Nk0"/>
+                        <viewControllerLayoutGuide type="bottom" id="MmI-op-HUG"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="dRD-WM-RZI" customClass="SKView">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="240"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="X12-9z-Q0c" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4541" y="820"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="disconnect" width="25" height="25"/>
+    </resources>
+</document>
