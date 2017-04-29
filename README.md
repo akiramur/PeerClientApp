@@ -14,28 +14,16 @@
 
 ## Usage
 
-1. Clone [PeerClient](https://github.com/akiramur/PeerClient) repository
-
-```
-$ git clone https://github.com/akiramur/PeerClient.git
-```
-
-2. Clone this repository.
-
-```
-$ git clone https://github.com/akiramur/PeerClientApp.git
-```
-
-3. Download [SocketRocket](https://github.com/facebook/SocketRocket) with carthage  
+1. Download [PeerClient](https://github.com/akiramur/PeerClient) and [SocketRocket](https://github.com/facebook/SocketRocket) with carthage  
 
 ```
 % cd path_to_the_directory/PeerClientApp  
 % carthage update --platform iOS  
 ```
 
-4. You also need existing [peerjs-server](https://github.com/peers/peerjs-server) which is already up and runing for signailng, or you need to set up by yourself.
+2. You also need existing [peerjs-server](https://github.com/peers/peerjs-server) which is already up and runing for signailng, or you need to set up by yourself.
 
-5. Edit <b>PeerClientApp/Configuration.swift</b> according to your peerjs-server settings.
+3. Edit <b>PeerClientApp/Configuration.swift</b> according to your peerjs-server settings.
 
 ```
 static let host: String = "put your peerjs server url"
