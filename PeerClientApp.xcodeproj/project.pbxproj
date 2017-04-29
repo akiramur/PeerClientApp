@@ -22,7 +22,6 @@
 		2AABB9371E5410FA00289386 /* ParticleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AABB92B1E5410FA00289386 /* ParticleViewController.swift */; };
 		2AABB9381E5410FA00289386 /* spark.png in Resources */ = {isa = PBXBuildFile; fileRef = 2AABB92C1E5410FA00289386 /* spark.png */; };
 		2AABB93B1E542CD700289386 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2AABB93A1E542CD700289386 /* Images.xcassets */; };
-		2AABB9B11E569A9B00289386 /* PeerClient.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2AABB9111E5405BB00289386 /* PeerClient.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		2AB72E7A1E53FE0B001A57AD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2AB72E781E53FE0B001A57AD /* Main.storyboard */; };
 		2AB72E7F1E53FE0B001A57AD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2AB72E7D1E53FE0B001A57AD /* LaunchScreen.storyboard */; };
 		2AB72E8A1E53FE0C001A57AD /* PeerClientAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AB72E891E53FE0C001A57AD /* PeerClientAppTests.swift */; };
@@ -32,31 +31,12 @@
 		2ABABE461E9C9D6D0077A11A /* VideoViewController+PeerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ABABE451E9C9D6D0077A11A /* VideoViewController+PeerDelegate.swift */; };
 		2AD19B3A1E937390002D6BA0 /* SocketRocket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AD19B391E937390002D6BA0 /* SocketRocket.framework */; };
 		2AD19B3D1E9373C7002D6BA0 /* SocketRocket.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2AD19B391E937390002D6BA0 /* SocketRocket.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		2ADC2B191EB47D2600A5330B /* PeerClient.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2ADC2B181EB47D2600A5330B /* PeerClient.framework */; };
+		2ADC2B1A1EB47D3200A5330B /* PeerClient.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2ADC2B181EB47D2600A5330B /* PeerClient.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		2ADEE2641E95F1DA00757E33 /* VideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ADEE2631E95F1DA00757E33 /* VideoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		2AABB9101E5405BB00289386 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 2AABB90B1E5405BB00289386 /* PeerClient.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 2AD75EBE1E52A78D00DEAFF8;
-			remoteInfo = PeerClient;
-		};
-		2AABB9121E5405BB00289386 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 2AABB90B1E5405BB00289386 /* PeerClient.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 2AD75EC71E52A78D00DEAFF8;
-			remoteInfo = PeerClientTests;
-		};
-		2AABB9141E5405CA00289386 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 2AABB90B1E5405BB00289386 /* PeerClient.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 2AD75EBD1E52A78D00DEAFF8;
-			remoteInfo = PeerClient;
-		};
 		2AB72E861E53FE0C001A57AD /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 2AB72E691E53FE0B001A57AD /* Project object */;
@@ -80,8 +60,8 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				2ADC2B1A1EB47D3200A5330B /* PeerClient.framework in CopyFiles */,
 				2AD19B3D1E9373C7002D6BA0 /* SocketRocket.framework in CopyFiles */,
-				2AABB9B11E569A9B00289386 /* PeerClient.framework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -94,7 +74,6 @@
 		2A5E8DB91EB1888D00A33AEC /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		2A5E8DBA1EB1888D00A33AEC /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		2A6BBCF61EA09E2B00A91AE7 /* ParticleData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParticleData.swift; sourceTree = "<group>"; };
-		2AABB90B1E5405BB00289386 /* PeerClient.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = PeerClient.xcodeproj; path = ../../PeerClient/PeerClient.xcodeproj; sourceTree = "<group>"; };
 		2AABB91D1E5410FA00289386 /* PeerClientApp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PeerClientApp-Bridging-Header.h"; sourceTree = "<group>"; };
 		2AABB9221E5410FA00289386 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2AABB9231E5410FA00289386 /* ContactsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactsViewController.swift; sourceTree = "<group>"; };
@@ -119,6 +98,7 @@
 		2ABABE421E9C8E200077A11A /* IncomingCallViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IncomingCallViewController.swift; sourceTree = "<group>"; };
 		2ABABE451E9C9D6D0077A11A /* VideoViewController+PeerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "VideoViewController+PeerDelegate.swift"; sourceTree = "<group>"; };
 		2AD19B391E937390002D6BA0 /* SocketRocket.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SocketRocket.framework; path = Carthage/Build/iOS/SocketRocket.framework; sourceTree = SOURCE_ROOT; };
+		2ADC2B181EB47D2600A5330B /* PeerClient.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PeerClient.framework; path = Carthage/Build/iOS/PeerClient.framework; sourceTree = SOURCE_ROOT; };
 		2ADEE2631E95F1DA00757E33 /* VideoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -128,6 +108,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2AD19B3A1E937390002D6BA0 /* SocketRocket.framework in Frameworks */,
+				2ADC2B191EB47D2600A5330B /* PeerClient.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -148,15 +129,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		2AABB90C1E5405BB00289386 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				2AABB9111E5405BB00289386 /* PeerClient.framework */,
-				2AABB9131E5405BB00289386 /* PeerClientTests.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		2AABB9271E5410FA00289386 /* SpriteKit */ = {
 			isa = PBXGroup;
 			children = (
@@ -237,8 +209,8 @@
 		2AB72EA41E53FF4E001A57AD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2ADC2B181EB47D2600A5330B /* PeerClient.framework */,
 				2AD19B391E937390002D6BA0 /* SocketRocket.framework */,
-				2AABB90B1E5405BB00289386 /* PeerClient.xcodeproj */,
 			);
 			name = Frameworks;
 			path = PeerClientApp;
@@ -259,7 +231,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				2AABB9151E5405CA00289386 /* PBXTargetDependency */,
 			);
 			name = PeerClientApp;
 			productName = PeerClientApp;
@@ -348,12 +319,6 @@
 			mainGroup = 2AB72E681E53FE0B001A57AD;
 			productRefGroup = 2AB72E721E53FE0B001A57AD /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = 2AABB90C1E5405BB00289386 /* Products */;
-					ProjectRef = 2AABB90B1E5405BB00289386 /* PeerClient.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				2AB72E701E53FE0B001A57AD /* PeerClientApp */,
@@ -362,23 +327,6 @@
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXReferenceProxy section */
-		2AABB9111E5405BB00289386 /* PeerClient.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = PeerClient.framework;
-			remoteRef = 2AABB9101E5405BB00289386 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		2AABB9131E5405BB00289386 /* PeerClientTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = PeerClientTests.xctest;
-			remoteRef = 2AABB9121E5405BB00289386 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		2AB72E6F1E53FE0B001A57AD /* Resources */ = {
@@ -452,11 +400,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		2AABB9151E5405CA00289386 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = PeerClient;
-			targetProxy = 2AABB9141E5405CA00289386 /* PBXContainerItemProxy */;
-		};
 		2AB72E871E53FE0C001A57AD /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 2AB72E701E53FE0B001A57AD /* PeerClientApp */;
@@ -592,6 +535,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = PeerClientApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
@@ -614,6 +558,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = PeerClientApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;

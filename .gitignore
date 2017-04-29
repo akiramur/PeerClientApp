@@ -36,5 +36,5 @@ DerivedData
 
 .DS_Store
 
-Carthage
-Cartfile.resolved
+Carthage/Checkouts
+Carthage/Build
