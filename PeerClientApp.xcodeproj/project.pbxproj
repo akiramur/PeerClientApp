@@ -29,10 +29,14 @@
 		2AB76DEA1E8CB7A9000028DC /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AB76DE91E8CB7A9000028DC /* Configuration.swift */; };
 		2ABABE431E9C8E200077A11A /* IncomingCallViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ABABE421E9C8E200077A11A /* IncomingCallViewController.swift */; };
 		2ABABE461E9C9D6D0077A11A /* VideoViewController+PeerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ABABE451E9C9D6D0077A11A /* VideoViewController+PeerDelegate.swift */; };
-		2AD19B3A1E937390002D6BA0 /* SocketRocket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AD19B391E937390002D6BA0 /* SocketRocket.framework */; };
-		2AD19B3D1E9373C7002D6BA0 /* SocketRocket.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2AD19B391E937390002D6BA0 /* SocketRocket.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		2ADC2B191EB47D2600A5330B /* PeerClient.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2ADC2B181EB47D2600A5330B /* PeerClient.framework */; };
-		2ADC2B1A1EB47D3200A5330B /* PeerClient.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2ADC2B181EB47D2600A5330B /* PeerClient.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		2ABD5DCC1ECAF79700F4470D /* CocoaAsyncSocket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2ABD5DC81ECAF79700F4470D /* CocoaAsyncSocket.framework */; };
+		2ABD5DCD1ECAF79700F4470D /* CocoaMQTT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2ABD5DC91ECAF79700F4470D /* CocoaMQTT.framework */; };
+		2ABD5DCE1ECAF79700F4470D /* PeerClient.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2ABD5DCA1ECAF79700F4470D /* PeerClient.framework */; };
+		2ABD5DCF1ECAF79700F4470D /* SwiftyTimer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2ABD5DCB1ECAF79700F4470D /* SwiftyTimer.framework */; };
+		2ABD5DD01ECAF7D600F4470D /* CocoaAsyncSocket.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2ABD5DC81ECAF79700F4470D /* CocoaAsyncSocket.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		2ABD5DD11ECAF7D600F4470D /* CocoaMQTT.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2ABD5DC91ECAF79700F4470D /* CocoaMQTT.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		2ABD5DD21ECAF7D600F4470D /* PeerClient.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2ABD5DCA1ECAF79700F4470D /* PeerClient.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		2ABD5DD31ECAF7D600F4470D /* SwiftyTimer.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2ABD5DCB1ECAF79700F4470D /* SwiftyTimer.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		2ADEE2641E95F1DA00757E33 /* VideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ADEE2631E95F1DA00757E33 /* VideoViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -60,8 +64,10 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				2ADC2B1A1EB47D3200A5330B /* PeerClient.framework in CopyFiles */,
-				2AD19B3D1E9373C7002D6BA0 /* SocketRocket.framework in CopyFiles */,
+				2ABD5DD01ECAF7D600F4470D /* CocoaAsyncSocket.framework in CopyFiles */,
+				2ABD5DD11ECAF7D600F4470D /* CocoaMQTT.framework in CopyFiles */,
+				2ABD5DD21ECAF7D600F4470D /* PeerClient.framework in CopyFiles */,
+				2ABD5DD31ECAF7D600F4470D /* SwiftyTimer.framework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -97,8 +103,10 @@
 		2AB76DE91E8CB7A9000028DC /* Configuration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
 		2ABABE421E9C8E200077A11A /* IncomingCallViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IncomingCallViewController.swift; sourceTree = "<group>"; };
 		2ABABE451E9C9D6D0077A11A /* VideoViewController+PeerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "VideoViewController+PeerDelegate.swift"; sourceTree = "<group>"; };
-		2AD19B391E937390002D6BA0 /* SocketRocket.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SocketRocket.framework; path = Carthage/Build/iOS/SocketRocket.framework; sourceTree = SOURCE_ROOT; };
-		2ADC2B181EB47D2600A5330B /* PeerClient.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PeerClient.framework; path = Carthage/Build/iOS/PeerClient.framework; sourceTree = SOURCE_ROOT; };
+		2ABD5DC81ECAF79700F4470D /* CocoaAsyncSocket.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CocoaAsyncSocket.framework; path = Carthage/Build/iOS/CocoaAsyncSocket.framework; sourceTree = SOURCE_ROOT; };
+		2ABD5DC91ECAF79700F4470D /* CocoaMQTT.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CocoaMQTT.framework; path = Carthage/Build/iOS/CocoaMQTT.framework; sourceTree = SOURCE_ROOT; };
+		2ABD5DCA1ECAF79700F4470D /* PeerClient.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PeerClient.framework; path = Carthage/Build/iOS/PeerClient.framework; sourceTree = SOURCE_ROOT; };
+		2ABD5DCB1ECAF79700F4470D /* SwiftyTimer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyTimer.framework; path = Carthage/Build/iOS/SwiftyTimer.framework; sourceTree = SOURCE_ROOT; };
 		2ADEE2631E95F1DA00757E33 /* VideoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -107,8 +115,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2AD19B3A1E937390002D6BA0 /* SocketRocket.framework in Frameworks */,
-				2ADC2B191EB47D2600A5330B /* PeerClient.framework in Frameworks */,
+				2ABD5DCC1ECAF79700F4470D /* CocoaAsyncSocket.framework in Frameworks */,
+				2ABD5DCD1ECAF79700F4470D /* CocoaMQTT.framework in Frameworks */,
+				2ABD5DCE1ECAF79700F4470D /* PeerClient.framework in Frameworks */,
+				2ABD5DCF1ECAF79700F4470D /* SwiftyTimer.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -209,8 +219,10 @@
 		2AB72EA41E53FF4E001A57AD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				2ADC2B181EB47D2600A5330B /* PeerClient.framework */,
-				2AD19B391E937390002D6BA0 /* SocketRocket.framework */,
+				2ABD5DC81ECAF79700F4470D /* CocoaAsyncSocket.framework */,
+				2ABD5DC91ECAF79700F4470D /* CocoaMQTT.framework */,
+				2ABD5DCA1ECAF79700F4470D /* PeerClient.framework */,
+				2ABD5DCB1ECAF79700F4470D /* SwiftyTimer.framework */,
 			);
 			name = Frameworks;
 			path = PeerClientApp;

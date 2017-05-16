@@ -262,7 +262,7 @@ class VideoViewController: UIViewController {
             peer.call(peerId: peerId, mediaStream: mediaStream, completion: { [weak self] (result) in
 
                 switch result {
-                case let .success(connection):
+                case .success(_):
                     print("call succeeded")
 
                     self?.setupCaptureSession()
@@ -371,7 +371,7 @@ class VideoViewController: UIViewController {
         peer.call(peerId: peerId, mediaStream: mediaStream, completion: { [weak self] (result) in
 
             switch result {
-            case let .success(connection):
+            case .success(_):
                 print("call succeeded")
 
                 self?.setupCaptureSession()

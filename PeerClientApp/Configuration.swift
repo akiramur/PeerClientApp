@@ -11,16 +11,13 @@ import PeerClient
 
 struct Configuration {
 
-    static let peerId: String = "myid0123"
-    static let host: String = "put your peerjs server url"
-    static let path: String = "/"
-    static let port: Int = 443
-    static let key: String = "put your peerjs server key"
-    static let secure: Bool = true
+    static let host: String = "m12.cloudmqtt.com"
+    static let port: UInt16 = 11201
+    static let username: String = "your username"
+    static let password: String = "your password"
+    static let keepAlive: UInt16 = 60
 
     static let stun = PeerIceServerOptions(url: "stun:stun.l.google.com:19302", username: "", credential: "")
     static let turn = PeerIceServerOptions(url: "turn:turn.bistri.com:80", username: "homeo", credential: "homeo")
     static let iceServerOptions: [PeerIceServerOptions] = [stun, turn]
-
-    static let herokuPingInterval: TimeInterval = 45.0
 }

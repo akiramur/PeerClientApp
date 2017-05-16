@@ -40,8 +40,8 @@ class MainViewController: UIViewController, PeerDelegate {
     var peer: Peer? {
         get {
             if _peer == nil {
-                let peerOptions = PeerOptions(key: Configuration.key, host: Configuration.host, path: Configuration.path, secure: Configuration.secure, port: Configuration.port, iceServerOptions: Configuration.iceServerOptions)
-                peerOptions.keepAliveTimerInterval = Configuration.herokuPingInterval
+                let mqttClientOptions = MqttClientOptions(host: Configuration.host, port: Configuration.port, username: Configuration.username, password: Configuration.password, keepAlive: Configuration.keepAlive)
+                let peerOptions = PeerOptions(mqttClientOptions: mqttClientOptions, iceServerOptions: Configuration.iceServerOptions)
 
                 _peer = Peer(options: peerOptions, delegate: self)
             }
@@ -211,8 +211,8 @@ class MainViewController: UIViewController, PeerDelegate {
         print("connectToSignailingServer")
 
         if self.peer == nil {
-            let peerOptions = PeerOptions(key: Configuration.key, host: Configuration.host, path: Configuration.path, secure: Configuration.secure, port: Configuration.port, iceServerOptions: Configuration.iceServerOptions)
-            peerOptions.keepAliveTimerInterval = Configuration.herokuPingInterval
+            let mqttClientOptions = MqttClientOptions(host: Configuration.host, port: Configuration.port, username: Configuration.username, password: Configuration.password, keepAlive: Configuration.keepAlive)
+            let peerOptions = PeerOptions(mqttClientOptions: mqttClientOptions, iceServerOptions: Configuration.iceServerOptions)
 
             self.peer = Peer(options: peerOptions, delegate: self)
         }
@@ -220,7 +220,7 @@ class MainViewController: UIViewController, PeerDelegate {
         self.signInStatus = .signingIn
         self.peer?.open(nil) { [weak self] (result) in
             switch result {
-            case let .success(peerId):
+            case .success(_):
                 self?.signInStatus = .signedIn
             case let .failure(error):
                 print("Peer open failed error: \(error)")
@@ -240,13 +240,7 @@ class MainViewController: UIViewController, PeerDelegate {
     }
 
     // MARK: PeerPeerDelegate
-
-    func peer(_ peer: Peer, didOpen peerId: String?) {
-        print("peer didOpen peerId: \(peerId ?? "")")
-
-        self.signInStatus = .signedIn
-    }
-
+    
     func peer(_ peer: Peer, didClose peerId: String?) {
         print("peer didClose peerId: \(peerId ?? "")")
         self.signInButton.setTitle("Sign In", for: .normal)
@@ -271,6 +265,10 @@ class MainViewController: UIViewController, PeerDelegate {
     }
 
     func peer(_ peer: Peer, didReceiveData data: Data) {
+
+    }
+
+    func peer(_ peer: Peer, didUpdatePeerIds peerIds: [String]) {
 
     }
 

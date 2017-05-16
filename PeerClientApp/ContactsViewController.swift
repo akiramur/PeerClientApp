@@ -133,11 +133,7 @@ class ContactsViewController: UIViewController, UITableViewDataSource, UITableVi
     // MARK: Private
 
     // MARK: PeerPeerDelegate
-
-    func peer(_ peer: Peer, didOpen peerId: String?) {
-        print("peer didOpen peerId: \(peerId ?? "")")
-    }
-
+    
     func peer(_ peer: Peer, didClose peerId: String?) {
         print("peer didClose peerId: \(peerId ?? "")")
 
@@ -164,6 +160,34 @@ class ContactsViewController: UIViewController, UITableViewDataSource, UITableVi
 
     func peer(_ peer: Peer, didReceiveData data: Data) {
         
+    }
+
+    func peer(_ peer: Peer, didUpdatePeerIds peerIds: [String]) {
+
+        self.peer?.listAllPeers { [weak self] (result) -> Void in
+
+            switch result {
+            case let .success(peerIds):
+                DispatchQueue.main.async {
+                    var newPeerIds: [String] = []
+
+                    for peerId in peerIds {
+                        if peerId != self?.peer?.peerId {
+                            newPeerIds.append(peerId)
+                        }
+                    }
+
+                    self?.peerIds = newPeerIds
+                    self?.destIdTableView.reloadData()
+                }
+
+            case .failure(_):
+                DispatchQueue.main.async {
+                    self?.peerIds = []
+                    self?.destIdTableView.reloadData()
+                }
+            }
+        }
     }
 
 }

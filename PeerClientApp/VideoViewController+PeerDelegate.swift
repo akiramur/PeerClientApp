@@ -12,11 +12,7 @@ import PeerClient
 extension VideoViewController: PeerDelegate {
 
     // MARK: PeerPeerDelegate
-
-    func peer(_ peer: Peer, didOpen peerId: String?) {
-        print("peer didOpen peerId: \(peerId ?? "")")
-    }
-
+    
     func peer(_ peer: Peer, didClose peerId: String?) {
         print("peer didClose peerId: \(peerId ?? "")")
 
@@ -56,6 +52,10 @@ extension VideoViewController: PeerDelegate {
         print("peer didReceive data")
         
         self.particleViewController?.draw(data)
+    }
+
+    func peer(_ peer: Peer, didUpdatePeerIds peerIds: [String]) {
+        
     }
 
 }

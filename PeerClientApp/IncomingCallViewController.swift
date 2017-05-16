@@ -70,11 +70,7 @@ class IncomingCallViewController: UIViewController, PeerDelegate {
     }
 
     // MARK: PeerPeerDelegate
-
-    func peer(_ peer: Peer, didOpen peerId: String?) {
-        print("peer didOpen peerId: \(peerId ?? "")")
-    }
-
+    
     func peer(_ peer: Peer, didClose peerId: String?) {
         print("peer didClose peerId: \(peerId ?? "")")
 
@@ -102,6 +98,10 @@ class IncomingCallViewController: UIViewController, PeerDelegate {
 
     func peer(_ peer: Peer, didReceiveData data: Data) {
         
+    }
+
+    func peer(_ peer: Peer, didUpdatePeerIds peerIds: [String]) {
+
     }
 
 }

@@ -1,2 +1,4 @@
-github "facebook/SocketRocket" ~> 0.4.2
-github "akiramur/PeerClient" ~> 0.1.0
+github "robbiehanson/CocoaAsyncSocket" "master"
+github "emqtt/CocoaMQTT" "master"
+github "radex/SwiftyTimer"
+github "akiramur/PeerClient" "mqtt"
